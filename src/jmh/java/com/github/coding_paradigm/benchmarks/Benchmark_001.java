@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(1)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-public class Benchmark_001_StringConcatenation {
+public class Benchmark_001 {
 
     @Param({"1", "10", "100"})
     private int length;

@@ -1,7 +1,19 @@
 package com.github.coding_paradigm.runner;
 
-public class RunnerSpawner {
+import org.openjdk.jmh.runner.Runner;
+import org.openjdk.jmh.runner.RunnerException;
+import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+public class Primer {
 
+    public static void main(String[] args) throws RunnerException {
+        if (args.length == 0) {
+            throw new IllegalStateException("No benchmark classes provided.");
+        }
+        var options = new OptionsBuilder()
+                .include(".*" + args[0] + ".*")
+                .build();
+        new Runner(options).run();
+    }
 
 }
