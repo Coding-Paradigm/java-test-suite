@@ -38,7 +38,7 @@ public class BM_005_Contains {
           "pomegranate",
           "tangerine");
 
-  @Param({"1", "4", "8"})
+  @Param({"1", "2", "3", "4", "5", "6", "7", "8"})
   private int amount;
 
   private List<String> integersList;
