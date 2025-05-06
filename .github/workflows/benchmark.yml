@@ -18,3 +18,9 @@ jobs:
 
       - name: Test with Gradle
         run: ./gradlew allBenchmarks
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: build/reports/benchmark/
+          if-no-files-found: error
