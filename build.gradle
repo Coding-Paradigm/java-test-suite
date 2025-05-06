@@ -25,3 +25,25 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+tasks.register('allBenchmarks') {
+    group = 'verification'
+    description = 'Runs all benchmarks'
+}
+
+fileTree('src/jmh/java/com/github/coding_paradigm/benchmarks').each { file ->
+    def name = file.name.replace('.java', '')
+    name = name.substring(name.indexOf('_') + 1, name.lastIndexOf('_'))
+    def taskName = 'benchmark' + name
+    tasks.register(taskName, JavaExec) {
+        group = 'verification'
+        dependsOn 'jmhClasses'
+        description = "Runs benchmark ${name}"
+        classpath = sourceSets.jmh.runtimeClasspath
+        mainClass.set("com.github.coding_paradigm.runner.Primer")
+        args name
+    }
+    tasks.named('allBenchmarks').configure {
+        dependsOn taskName
+    }
+}

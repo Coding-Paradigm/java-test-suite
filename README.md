@@ -18,3 +18,17 @@ We recommend you to read our [website](https://coding-paradigm.pages.dev/) for e
 - Java 24 is used
 - Explore the `src/test/java` directory for all test cases
 - Explore the `src/jmh/java` directory for all benchmarks
+
+## 🛠️ Running Tests
+
+- `gradlew test` to run all tests
+- `gradlew test --tests "TestName"` to run specific tests
+- See console or `build/reports/tests/index.html` for a detailed report
+- Alternatively, turn Gradle Build Scan on
+  - `gradlew test --scan` to generate a build scan
+  - Follow the link in the console output to view the scan
+
+## 📊 Running Benchmarks
+- `gradlew allBenchmarks` to run all benchmarks
+- `gradlew benchmark{Number}` to run specific benchmarks
+- See console or `build/reports/benchmark/` for detailed reports
