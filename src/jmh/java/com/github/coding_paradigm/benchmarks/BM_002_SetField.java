@@ -32,43 +32,43 @@ public class BM_002_SetField {
       }
     }
 
-    public static int staticField = 42;
-    public int field = 42;
+    public static int staticField = 0;
+    public int field = 0;
   }
 
   @Benchmark
   @OperationsPerInvocation(1000)
   public void staticField(Blackhole bh) {
-    bh.consume(TestClass.staticField);
+    TestClass.staticField = 42;
   }
 
   @Benchmark
   @OperationsPerInvocation(1000)
-  public void staticFieldReflection(Blackhole bh) throws IllegalAccessException {
-    bh.consume((int) TestClass.STATIC_FIELD.get(null));
+  public void staticFieldReflection() throws IllegalAccessException {
+    TestClass.STATIC_FIELD.setInt(null, 42);
   }
 
   @Benchmark
   @OperationsPerInvocation(1000)
-  public void staticFieldVH(Blackhole bh) {
-    bh.consume((int) TestClass.STATIC_FIELD_HANDLE.get());
+  public void staticFieldVH() {
+    TestClass.STATIC_FIELD_HANDLE.set((int) 42);
   }
 
   @Benchmark
   @OperationsPerInvocation(1000)
-  public void field(Blackhole bh) {
-    bh.consume(TestClass.INSTANCE.field);
+  public void field() {
+    TestClass.INSTANCE.field = 42;
   }
 
   @Benchmark
   @OperationsPerInvocation(1000)
-  public void fieldReflection(Blackhole bh) throws IllegalAccessException {
-    bh.consume((int) TestClass.FIELD.get(TestClass.INSTANCE));
+  public void fieldReflection() throws IllegalAccessException {
+    TestClass.FIELD.setInt(TestClass.INSTANCE, 42);
   }
 
   @Benchmark
   @OperationsPerInvocation(1000)
-  public void fieldVH(Blackhole bh) {
-    bh.consume((int) TestClass.FIELD_HANDLE.get(TestClass.INSTANCE));
+  public void fieldVH() {
+    TestClass.FIELD_HANDLE.set(TestClass.INSTANCE, 42);
   }
 }
