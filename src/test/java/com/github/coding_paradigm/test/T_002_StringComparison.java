@@ -3,7 +3,7 @@ package com.github.coding_paradigm.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Test_002_StringComparison {
+public class T_002_StringComparison {
 
     @Test
     public void test() {

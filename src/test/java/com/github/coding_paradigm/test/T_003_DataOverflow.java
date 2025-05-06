@@ -3,7 +3,7 @@ package com.github.coding_paradigm.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Test_003_DataOverflow {
+public class T_003_DataOverflow {
 
     @Test
     public void test() {

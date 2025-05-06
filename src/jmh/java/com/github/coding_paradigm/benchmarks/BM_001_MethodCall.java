@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(1)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-public class Benchmark_001_MethodCall {
+public class BM_001_MethodCall {
 
     public static class TestClass {
 

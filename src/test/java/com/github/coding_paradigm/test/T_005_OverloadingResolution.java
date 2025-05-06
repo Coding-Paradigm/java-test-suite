@@ -3,7 +3,7 @@ package com.github.coding_paradigm.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Test_005_OverloadingResolution {
+public class T_005_OverloadingResolution {
 
     public static class TestClass {
 

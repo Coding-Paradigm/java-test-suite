@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-public class Test_001_CafeBabe {
+public class T_001_CafeBabe {
 
     @Test
     public void test() throws IOException {

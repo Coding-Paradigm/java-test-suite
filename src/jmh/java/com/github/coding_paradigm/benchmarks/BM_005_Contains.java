@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(1)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-public class Benchmark_005_Contains {
+public class BM_005_Contains {
 
     private static final List<String> WORDS = List.of(
             "apple", "banana", "orange", "grape", "kiwi", "mango", "peach", "pear",

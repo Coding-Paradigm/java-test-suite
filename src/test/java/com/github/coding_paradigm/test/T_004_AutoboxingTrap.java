@@ -3,7 +3,7 @@ package com.github.coding_paradigm.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Test_004_AutoboxingTrap {
+public class T_004_AutoboxingTrap {
 
     @Test
     public void test() {
