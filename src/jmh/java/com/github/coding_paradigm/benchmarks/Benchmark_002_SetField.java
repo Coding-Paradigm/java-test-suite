@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(1)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-public class Benchmark_002_Field {
+public class Benchmark_002_SetField {
 
     public static class TestClass {
 
