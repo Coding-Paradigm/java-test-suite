@@ -6,6 +6,13 @@ plugins {
 group = 'com.github.coding_paradigm'
 version = '1.0.0'
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(24))
+        vendor.set(JvmVendorSpec.ORACLE)
+    }
+}
+
 sourceSets {
     jmh
 }
