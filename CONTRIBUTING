@@ -31,7 +31,7 @@ Please include a brief explanation of your test logic in your PR and in the code
 
 ## ✅ Code Style
 
-Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html). We recommend running a `./gradlew spotless` before PRing.
+Follow the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html). We recommend running a `./gradlew spotlessApply` before PRing.
 
 ---
 
