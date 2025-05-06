@@ -6,20 +6,19 @@ This test suite is designed to demonstrate JVM-level performance and behavioural
 
 ---
 
-## 📦 Repository Structure
-
-Each topic is implemented as a subproject (Gradle module) under `/src/main/java/`. The structure allows each test case to be minimal, isolated, and reproducible.
-
----
-
 ## 🛠 How to Contribute
+
+### 🧱 Structure
+
+- `src/jmh/java` for benchmarks
+- `src/test/java` for tests
+- Use `Blackhole` where appropriate to avoid dead code elimination
 
 ### 🔍 Naming Conventions
 
 - Test and benchmark class names should be descriptive
 - Tests must be prefixed with 'T_NumericalID_Name' and benchmarks prefixed with 'BM_NumericalID_Name'
     - Does not matter if it ends up conflicting, the repository maintainers will fix this when the PR is merged
-- Use `Blackhole` where appropriate to avoid dead code elimination
 
 ---
 
