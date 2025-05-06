@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(1)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-public class Benchmark_001 {
+public class Benchmark_003_StringConcatenation {
 
     @Param({"1", "10", "100"})
     private int length;
@@ -45,15 +45,6 @@ public class Benchmark_001 {
 
     @Benchmark
     public void builder(Blackhole bh) {
-        var sb = new StringBuilder();
-        for (var str : this.strings) {
-            sb.append(str);
-        }
-        bh.consume(sb.toString());
-    }
-
-    @Benchmark
-    public void builderWithDeterminedSize(Blackhole bh) {
         var sb = new StringBuilder();
         for (var str : this.strings) {
             sb.append(str);
